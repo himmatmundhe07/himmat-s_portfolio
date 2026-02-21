@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowRight, Download } from "lucide-react";
+import { Typewriter } from 'react-simple-typewriter';
 import profileImage from "../assets/himmat.png";
 
 export default function Hero() {
@@ -46,7 +47,15 @@ export default function Hero() {
                     >
                         Hi, I’m <br />
                         <span className="text-blue-600 dark:text-blue-500 relative inline-block">
-                            Himmat
+                            <Typewriter
+                                words={['Himmat', 'a Developer', 'a Designer']}
+                                loop={0}
+                                cursor
+                                cursorStyle='|'
+                                typeSpeed={120}
+                                deleteSpeed={80}
+                                delaySpeed={1500}
+                            />
                             <svg className="absolute w-full h-3 -bottom-1 left-0 text-blue-200 dark:text-blue-900 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                                 <path d="M0 5 Q 50 10 100 5 L 100 0 Q 50 5 0 0 Z" fill="currentColor" />
                             </svg>

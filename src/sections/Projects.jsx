@@ -22,6 +22,7 @@ const projects = [
         tagline: "Real-time News & Weather Portal",
         description: "A responsive web application acting as a central hub for breaking news and live weather updates. Features a clean interface inspired by top-tier publications.",
         tech: ["React", "The Guardian API", "WeatherAPI", "CSS Grid"],
+        image: "https://private-user-images.githubusercontent.com/139203530/526552284-d7fd68bf-67f8-463e-b77d-b77a26cf81a6.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzE2NTQxNzIsIm5iZiI6MTc3MTY1Mzg3MiwicGF0aCI6Ii8xMzkyMDM1MzAvNTI2NTUyMjg0LWQ3ZmQ2OGJmLTY3ZjgtNDYzZS1iNzdkLWI3N2EyNmNmODFhNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIyMVQwNjA0MzJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMDQ0YTc5N2Y4MDUxYjUyM2EwNjRmNWE5Nzc3ZTJhNzg3MjFjM2Y2NjVmNmI5NGQ2YmRlZmY2YzM5ODc1NDJjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.SKqK7-hW7W9Yut35F2f-uWu63ItnBonKBnjIxssNTE0",
         links: {
             live: "https://taazakhabarbydemu.netlify.app/",
             github: "https://github.com/himmatmundhe07/Taaza-Khabar",
@@ -46,7 +47,7 @@ const projects = [
         title: "Bombay Closet Cleanse",
         tagline: "Thrift Store E-commerce",
         description: "A thrift shop e-commerce interface focusing on fashion and sustainability. Features home, premium finds, and cart pages.",
-        tech: ["React", "Tailwind", "UI/UX"],
+        tech: ["HTML/CSS", "JS", "Responsive"],
         image: bombayCloset,
         links: {
             live: "https://bombay-closet-by-demu.netlify.app/",
