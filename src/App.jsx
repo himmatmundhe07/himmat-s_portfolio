@@ -29,6 +29,7 @@ function App() {
         <About />
         <Journey />
         <Projects />
+        <Certificates />
         <GithubActivity />
         <Skills />
         <Certificates />
