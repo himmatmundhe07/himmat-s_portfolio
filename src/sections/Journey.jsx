@@ -5,20 +5,20 @@ import { CheckCircle2 } from "lucide-react";
 const timelineData = [
     {
         year: "2025 - Present",
-        title: "BE/B.Tech in CSE",
-        description: "Pursuing Bachelor's in Computer Science Engineering at Swaminarayan University in collaboration with Coding Gita. Focusing on Full Stack Development and System Design.",
+        title: "B.E. in Computer Engineering",
+        description: "Pursuing Bachelor's in Computer Engineering at Swaminarayan University, Kalol. CGPA: 9.2/10. Specializing in Full Stack Development (MERN) and System Design through Coding Gita collaboration.",
         type: "Education",
     },
     {
-        year: "2025",
-        title: "Higher Secondary",
-        description: "Completed Higher Secondary Education with a focus on Science/Mathematics.",
+        year: "2023 - 2025",
+        title: "Higher Secondary (12th)",
+        description: "Completed Higher Secondary Education at Shree Swaminarayan International School with a focus on Science/Mathematics.",
         type: "Education",
     },
     {
-        year: "2023",
-        title: "Secondary School",
-        description: "Completed Secondary School Foundation.",
+        year: "2021 - 2023",
+        title: "Secondary School (10th)",
+        description: "Completed Secondary School Foundation at Shree Swaminarayan International School.",
         type: "Education",
     },
 ];
@@ -45,11 +45,9 @@ export default function Journey() {
     };
 
     return (
-        <section id="journey" className="py-24 bg-white dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
-            {/* Background Gradients */}
+        <section id="journey" className="py-24 bg-transparent relative overflow-hidden transition-colors duration-300">
+            {/* Background Gradients removed for professional look */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-[10%] left-[5%] w-96 h-96 bg-blue-50/50 dark:bg-blue-900/10 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-50 dark:opacity-20 transition-colors"></div>
-                <div className="absolute bottom-[10%] right-[5%] w-96 h-96 bg-indigo-50/50 dark:bg-indigo-900/10 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-50 dark:opacity-20 transition-colors"></div>
             </div>
 
             <div className="max-w-4xl mx-auto px-6 relative z-10">

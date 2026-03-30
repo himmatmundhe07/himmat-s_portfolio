@@ -60,10 +60,8 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-24 bg-slate-50 dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
-            {/* Background Decorations */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 dark:bg-blue-900/20 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-20 animate-blob"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 dark:bg-indigo-900/20 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <section id="contact" className="py-24 bg-transparent relative overflow-hidden transition-colors duration-300">
+            {/* Background Decorations removed for professional look */}
 
             <div className="max-w-6xl mx-auto px-6 relative z-10">
                 <motion.div

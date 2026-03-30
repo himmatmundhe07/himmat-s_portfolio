@@ -60,7 +60,7 @@ export default function Footer() {
                                     </a>
                                 </li>
                                 <li className="text-slate-500">
-                                    Gujarat, India
+                                    Ahmedabad, Gujarat, India
                                 </li>
                             </ul>
                         </div>

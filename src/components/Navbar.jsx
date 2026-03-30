@@ -8,6 +8,7 @@ const navLinks = [
     { name: "About", href: "about" },
     { name: "Journey", href: "journey" },
     { name: "Projects", href: "projects" },
+    { name: "Hackathons", href: "hackathons" },
     { name: "Skills", href: "skills" },
     { name: "Contact", href: "contact" },
 ];
@@ -52,8 +53,8 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-                ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-md border-b border-slate-200/50 dark:border-slate-800/50 py-3"
-                : "bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border-b border-white/20 dark:border-slate-800/20 py-5"
+                ? "bg-[#F5F5F7]/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-md border-b border-slate-200/50 dark:border-slate-800/50 py-3"
+                : "bg-[#F5F5F7]/60 dark:bg-slate-900/60 backdrop-blur-md border-b border-slate-200/20 dark:border-slate-800/20 py-5"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center relative">
@@ -120,7 +121,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-lg py-8 flex flex-col items-center space-y-6 animate-fade-in">
+                <div className="md:hidden absolute top-full left-0 w-full bg-[#F5F5F7] dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-lg py-8 flex flex-col items-center space-y-6 animate-fade-in">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}

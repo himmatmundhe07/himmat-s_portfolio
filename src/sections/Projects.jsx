@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, Youtube, Layers, Layout, Gamepad2 } from "lucide-react";
+import { ExternalLink, Github, Youtube, Layers, Layout, Gamepad2, Pen } from "lucide-react";
 
 import bombayCloset from "../assets/Bombay Closet Cleanse.png";
 import cetaphil from "../assets/cetaphil.png";
@@ -12,10 +12,24 @@ const categories = [
     { id: "functional", label: "Functional Apps", icon: Layers },
     { id: "clones", label: "Website Clones", icon: Layout },
     { id: "games", label: "Interactive Games", icon: Gamepad2 },
+    { id: "design", label: "UI/UX Design", icon: Pen },
 ];
 
 const projects = [
     // Functional Applications
+    {
+        category: "functional",
+        title: "Sanjeevani",
+        tagline: "AI-Powered Emergency Healthcare Ecosystem",
+        description: "Unified platform connecting patients, hospitals, and pharmacies. Features ER facial recognition scanner for <3s data retrieval, live SOS pipeline with GPS, real-time first-aid instructions, and Gemini-powered triage with drug interaction flagging.",
+        tech: ["React 18", "TypeScript", "Supabase", "Gemini 2.5 API", "face-api.js", "Leaflet.js"],
+        image: "https://private-user-images.githubusercontent.com/139203530/526552284-d7fd68bf-67f8-463e-b77d-b77a26cf81a6.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzE2NTQxNzIsIm5iZiI6MTc3MTY1Mzg3MiwicGF0aCI6Ii8xMzkyMDM1MzAvNTI2NTUyMjg0LWQ3ZmQ2OGJmLTY3ZjgtNDYzZS1iNzdkLWI3N2EyNmNmODFhNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIyMVQwNjA0MzJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMDQ0YTc5N2Y4MDUxYjUyM2EwNjRmNWE5Nzc3ZTJhNzg3MjFjM2Y2NjVmNmI5NGQ2YmRlZmY2YzM5ODc1NDJjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.SKqK7-hW7W9Yut35F2f-uWu63ItnBonKBnjIxssNTE0",
+        links: {
+            live: "https://wce-hackathon2026-4-bits.vercel.app/",
+            github: "https://github.com/himmatmundhe07/Sanjeevani",
+        },
+        color: "bg-emerald-600",
+    },
     {
         category: "functional",
         title: "Taaza Khabar",
@@ -31,10 +45,10 @@ const projects = [
     },
     {
         category: "functional",
-        title: "Air Talk",
-        tagline: "Bluetooth Offline Messenger",
-        description: "A decentralized chat application enabling real-time communication without Internet or SIM cards using Bluetooth RFCOMM.",
-        tech: ["Java", "Android SDK", "Bluetooth API"],
+        title: "Air Talks",
+        tagline: "Real-Time Chat Application",
+        description: "Multi-user real-time messaging with WebSockets. Features secure JWT authentication with isolated chat rooms, optimized for minimal delivery lag.",
+        tech: ["React", "Node.js", "Socket.io", "JWT"],
         links: {
             github: "https://github.com/himmatmundhe07/Air-Talks",
         },
@@ -135,6 +149,17 @@ const projects = [
         },
         color: "bg-purple-600",
     },
+
+    // UI/UX Design
+    {
+        category: "design",
+        title: "Flight Booking UI/UX",
+        tagline: "End-to-End Booking Flow Design",
+        description: "Complete end-to-end flight booking flow designed in Figma. High-fidelity mockups with reusable component library, focused on visual hierarchy and progressive disclosure for optimal user experience.",
+        tech: ["Figma", "UI/UX", "Prototyping", "Design System"],
+        links: {},
+        color: "bg-violet-600",
+    },
 ];
 
 export default function Projects() {
@@ -143,7 +168,7 @@ export default function Projects() {
     const filteredProjects = projects.filter(p => p.category === activeCategory);
 
     return (
-        <section id="projects" className="py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
+        <section id="projects" className="py-24 bg-transparent relative transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -190,7 +215,7 @@ export default function Projects() {
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3 }}
                                 key={project.title}
-                                className="bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-1 group flex flex-col h-full"
+                                className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-1 group flex flex-col h-full"
                             >
                                 {/* Image or Fallback Header */}
                                 <div className={`h-52 relative overflow-hidden ${project.image ? "" : project.color || 'bg-slate-800'}`}>

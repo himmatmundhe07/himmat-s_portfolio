@@ -4,7 +4,7 @@ import { Code, Coffee, Globe } from "lucide-react";
 
 export default function About() {
     return (
-        <section id="about" className="py-32 bg-white dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
+        <section id="about" className="py-32 bg-transparent relative overflow-hidden transition-colors duration-300">
             <div className="max-w-6xl mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -21,27 +21,32 @@ export default function About() {
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8 font-heading leading-tight">
                             CSE Student & <br />
-                            <span className="text-slate-500 dark:text-slate-400">Software Developer</span>
+                            <span className="text-slate-500 dark:text-slate-400">MERN Stack Developer</span>
                         </h2>
 
                         <div className="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
                             <p>
-                                I’m a first-year <strong className="text-slate-900 dark:text-white font-semibold">Computer Science Engineering student</strong> focused on building practical software with strong fundamentals. I’m aggressively developing core skills in <strong className="text-slate-900 dark:text-white font-semibold">React, Node.js, and System Design</strong> through hands-on projects.
+                                I'm a first-year <strong className="text-slate-900 dark:text-white font-semibold">Computer Science Engineering student</strong> at Swaminarayan University (CGPA: 9.2/10), specializing in the <strong className="text-slate-900 dark:text-white font-semibold">MERN Stack</strong>. Experienced in building production-grade systems including a full-stack healthcare platform and real-time communication tools.
                             </p>
                             <p>
-                                I enjoy working on problems that involve real constraints such as <strong className="text-slate-900 dark:text-white font-semibold">logic, reliability, and clear user flow</strong>. My goal is to grow into a dependable software engineer by continuously shipping, learning, and refining my craft.
+                                Strong focus on <strong className="text-slate-900 dark:text-white font-semibold">clean code, scalable architecture, and intuitive UI/UX</strong>. I've solved 150+ problems on LeetCode with a strong grasp of arrays, strings, recursion, and dynamic programming.
                             </p>
                         </div>
 
                         <div className="mt-10 flex gap-6">
                             <div className="flex flex-col gap-1">
-                                <span className="text-3xl font-bold text-blue-600 dark:text-blue-400 font-heading">02+</span>
-                                <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide font-medium">Years coding</span>
+                                <span className="text-3xl font-bold text-blue-600 dark:text-blue-400 font-heading">150+</span>
+                                <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide font-medium">LeetCode Solved</span>
                             </div>
                             <div className="w-px h-12 bg-slate-200 dark:bg-slate-700"></div>
                             <div className="flex flex-col gap-1">
                                 <span className="text-3xl font-bold text-blue-600 dark:text-blue-400 font-heading">10+</span>
                                 <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide font-medium">Projects Built</span>
+                            </div>
+                            <div className="w-px h-12 bg-slate-200 dark:bg-slate-700"></div>
+                            <div className="flex flex-col gap-1">
+                                <span className="text-3xl font-bold text-blue-600 dark:text-blue-400 font-heading">9.2</span>
+                                <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide font-medium">CGPA</span>
                             </div>
                         </div>
                     </div>
@@ -71,11 +76,11 @@ export default function About() {
                                     </div>
                                     <div className="pl-6 flex gap-2">
                                         <span className="text-slate-400">role:</span>
-                                        <span className="text-green-400">'Software Engineer'</span>,
+                                        <span className="text-green-400">'MERN Stack Developer'</span>,
                                     </div>
                                     <div className="pl-6 flex gap-2">
                                         <span className="text-slate-400">skills:</span>
-                                        <span className="text-yellow-300">['React', 'Node', 'Logic']</span>
+                                        <span className="text-yellow-300">['React', 'Node', 'TypeScript']</span>
                                     </div>
                                     <div className="text-yellow-300">{"}"}</div>
                                 </div>

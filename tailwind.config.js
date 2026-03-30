@@ -7,7 +7,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                background: '#f8fafc', // slate-50
+                background: '#F5F5F7', // premium ultra-light gray
                 surface: '#ffffff',
                 primary: '#0f172a', // slate-900 (Deep charcoal)
                 secondary: '#64748b', // slate-500 (Muted blue/slate)

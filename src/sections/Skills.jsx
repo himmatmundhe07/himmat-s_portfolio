@@ -8,39 +8,41 @@ const skills = {
     "Frontend Magic": [
         { name: "React", icon: <FaReact className="text-blue-500" /> },
         { name: "JavaScript (ES6+)", icon: <SiJavascript className="text-yellow-400 bg-black rounded" /> },
+        { name: "TypeScript", icon: <Code2 className="text-blue-600" /> },
         { name: "HTML5", icon: <FaHtml5 className="text-orange-600" /> },
         { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" /> },
-        { name: "Figma", icon: <FaFigma className="text-purple-500" /> },
+        { name: "shadcn/ui", icon: <Code2 className="text-slate-700 dark:text-slate-400" /> },
     ],
-    "Backend Systems": [
+    "Backend & Database": [
         { name: "C / C++", icon: <Code2 className="text-blue-700 dark:text-blue-400" /> },
         { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
         { name: "Express", icon: <SiExpress className="text-slate-700 dark:text-slate-400" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+        { name: "Supabase", icon: <Database className="text-emerald-500" /> },
+        { name: "PostgreSQL", icon: <Database className="text-blue-500" /> },
         { name: "REST APIs", icon: <Server className="text-slate-500 dark:text-slate-400" /> },
     ],
-    "Dev Tools": [
+    "AI & Dev Tools": [
+        { name: "Gemini 2.5 Flash", icon: <Brain className="text-blue-500" /> },
+        { name: "face-api.js", icon: <Globe className="text-purple-500" /> },
         { name: "Git & GitHub", icon: <FaGithub className="text-slate-900 dark:text-white" /> },
-        { name: "VS Code", icon: <Code2 className="text-blue-500" /> },
         { name: "Postman", icon: <Terminal className="text-orange-500" /> },
+        { name: "Leaflet.js", icon: <Globe className="text-green-600" /> },
+        { name: "Figma", icon: <FaFigma className="text-purple-500" /> },
         { name: "Vercel", icon: <Globe className="text-slate-900 dark:text-white" /> },
-        { name: "Netlify", icon: <Globe className="text-teal-500" /> },
-        { name: "Render", icon: <Globe className="text-purple-600 dark:text-purple-400" /> },
     ],
 };
 
 const learning = [
     { name: "Next.js", icon: <Globe className="text-slate-900 dark:text-white" /> },
-    { name: "Data Structures", icon: <Brain className="text-pink-600" /> }
+    { name: "DSA (150+ LC)", icon: <Brain className="text-pink-600" /> }
 ]
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 bg-slate-50 dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
-            {/* Decorative background elements */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 dark:bg-blue-900/20 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-20 animate-blob"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-100 dark:bg-purple-900/20 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <section id="skills" className="py-24 bg-transparent relative overflow-hidden transition-colors duration-300">
+            {/* Decorative background elements removed for professional look */}
 
             <div className="max-w-6xl mx-auto px-6 relative z-10">
                 <motion.div
@@ -74,7 +76,7 @@ export default function Skills() {
                                 {items.map((skill) => (
                                     <div
                                         key={skill.name}
-                                        className="flex items-center gap-2 bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-200 px-3 py-2 rounded-lg text-sm font-medium border border-slate-100 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 hover:bg-slate-100 dark:hover:bg-slate-600 transition-all cursor-default select-none"
+                                        className="flex items-center gap-2 bg-white dark:bg-slate-700/50 text-slate-700 dark:text-slate-200 px-3 py-2 rounded-lg text-sm font-medium border border-slate-100 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 hover:bg-slate-100 dark:hover:bg-slate-600 transition-all cursor-default select-none"
                                     >
                                         <span className="text-lg">{skill.icon}</span>
                                         <span>{skill.name}</span>

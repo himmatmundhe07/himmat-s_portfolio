@@ -8,26 +8,26 @@ import msCert from "../assets/microsoft certificate.jpg";
 
 const certificates = [
     {
-        title: "C Programming",
-        issuer: "Internal Organization",
-        date: "2023",
-        description: "Solid foundation in C programming, memory management, and data structures.",
+        title: "Introduction to Generative AI",
+        issuer: "Google Cloud",
+        date: "December 2025",
+        description: "Comprehensive understanding of Generative AI fundamentals, large language models, and responsible AI practices from Google Cloud.",
         image: cCert,
         color: "from-blue-500 to-cyan-500",
     },
     {
-        title: "JavaScript Algorithms",
-        issuer: "FreeCodeCamp / Other",
-        date: "2024",
-        description: "Advanced JavaScript concepts including algorithms, data structures, and functional programming.",
+        title: "Google Cloud Arcade — Silver League",
+        issuer: "Google Cloud",
+        date: "February 2026",
+        description: "Achieved 4 Sprint Badges and 782 points. Hands-on experience with Google Cloud services and cloud computing fundamentals.",
         image: jsCert,
         color: "from-yellow-400 to-amber-500",
     },
     {
-        title: "Microsoft Certification",
-        issuer: "Microsoft",
-        date: "2024",
-        description: "Distinguished achievement in cloud fundamentals and software development practices.",
+        title: "GitHub Copilot Fundamentals",
+        issuer: "Microsoft × Simplilearn",
+        date: "December 2025",
+        description: "Mastered AI-assisted development with GitHub Copilot, enhancing coding productivity and understanding AI-powered software development workflows.",
         image: msCert,
         color: "from-blue-600 to-indigo-700",
     },
@@ -39,7 +39,7 @@ export default function Certificates() {
     const [selectedCert, setSelectedCert] = useState(null);
 
     return (
-        <section id="certificates" className="py-24 bg-white dark:bg-slate-900 relative overflow-hidden transition-colors duration-300" ref={ref}>
+        <section id="certificates" className="py-24 bg-transparent relative overflow-hidden transition-colors duration-300" ref={ref}>
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-100 dark:from-slate-800 via-transparent to-transparent opacity-60 transition-colors"></div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -138,9 +138,9 @@ export default function Certificates() {
                             <img
                                 src={selectedCert.image}
                                 alt={selectedCert.title}
-                                className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+                                className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl relative"
                             />
-                            <div className="mt-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md px-6 py-3 rounded-full text-slate-900 dark:text-white font-medium shadow-lg">
+                            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md px-8 py-3 rounded-full text-slate-900 dark:text-white font-bold shadow-2xl z-50 whitespace-nowrap text-lg">
                                 {selectedCert.title}
                             </div>
                         </motion.div>

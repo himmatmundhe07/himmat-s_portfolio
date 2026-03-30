@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowRight, Download } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight, Download, Youtube } from "lucide-react";
 import { Typewriter } from 'react-simple-typewriter';
 import profileImage from "../assets/himmat.png";
 
@@ -24,7 +24,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="min-h-screen flex items-center bg-slate-50 dark:bg-slate-900 pt-20 overflow-hidden transition-colors duration-300"
+            className="min-h-screen flex items-center bg-transparent pt-20 overflow-hidden transition-colors duration-300"
         >
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center w-full">
                 {/* Left Column: Text Content */}
@@ -48,7 +48,7 @@ export default function Hero() {
                         Hi, I’m <br />
                         <span className="text-blue-600 dark:text-blue-500 relative inline-block">
                             <Typewriter
-                                words={['Himmat', 'a Developer', 'a Designer']}
+                                words={['Himmat', 'a MERN Developer', 'a UI/UX Designer']}
                                 loop={0}
                                 cursor
                                 cursorStyle='|'
@@ -67,19 +67,21 @@ export default function Hero() {
                         className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-lg mb-10 leading-relaxed font-light"
                     >
                         <strong className="font-semibold text-slate-900 dark:text-white block mb-4">
-                            I build clean, interactive web experiences with a focus on usability and performance.
+                            I build production-grade, full-stack systems with a focus on clean code and scalable architecture.
                         </strong>
-                        A Computer Science student and aspiring Software Developer, focused on
-                        building practical, efficient solutions through code.
+                        A first-year CSE student specializing in the MERN stack, experienced in building
+                        healthcare platforms, real-time communication tools, and intuitive UI/UX designs.
                     </motion.p>
 
                     <motion.div variants={item} className="flex flex-wrap gap-4 mb-12">
                         <a
-                            href="/resume.pdf"
+                            href="https://drive.google.com/file/d/1r_KVQM-E3jN99eb-pW0Jm1R7LUSIj85d/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="group px-8 py-4 bg-slate-900 dark:bg-blue-600 text-white font-medium rounded-xl hover:bg-slate-800 dark:hover:bg-blue-700 transition-all flex items-center gap-2 shadow-xl shadow-slate-900/20 dark:shadow-blue-900/20 active:scale-95"
                         >
                             <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
-                            Download Resume
+                            View Resume
                         </a>
                         <a
                             href="#contact"
@@ -92,7 +94,7 @@ export default function Hero() {
 
                     <motion.div variants={item} className="flex gap-6 text-slate-900 dark:text-slate-400">
                         <a
-                            href="https://github.com"
+                            href="https://github.com/himmatmundhe07"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-blue-600 dark:hover:text-white transition-colors p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full"
@@ -100,7 +102,7 @@ export default function Hero() {
                             <Github size={28} />
                         </a>
                         <a
-                            href="https://linkedin.com"
+                            href="https://www.linkedin.com/in/himmat-mundhe-17b5a1213"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors p-2 hover:bg-blue-50 dark:hover:bg-slate-800 rounded-full"
@@ -108,10 +110,18 @@ export default function Hero() {
                             <Linkedin size={28} />
                         </a>
                         <a
-                            href="mailto:email@example.com"
-                            className="hover:text-red-500 dark:hover:text-red-400 transition-colors p-2 hover:bg-red-50 dark:hover:bg-slate-800 rounded-full"
+                            href="mailto:himmat.mundhe.cg@gmail.com"
+                            className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors p-2 hover:bg-amber-50 dark:hover:bg-slate-800 rounded-full"
                         >
                             <Mail size={28} />
+                        </a>
+                        <a
+                            href="https://www.youtube.com/@himmatmundhe07"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-red-500 dark:hover:text-red-400 transition-colors p-2 hover:bg-red-50 dark:hover:bg-slate-800 rounded-full"
+                        >
+                            <Youtube size={32} />
                         </a>
                     </motion.div>
                 </motion.div>
@@ -124,9 +134,7 @@ export default function Hero() {
                     className="relative order-1 md:order-2 flex justify-center md:justify-end"
                 >
                     <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px]">
-                        {/* Abstract decorative blobs */}
-                        <div className="absolute inset-0 bg-blue-100 dark:bg-blue-900/20 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-30 dark:opacity-20 animate-blob"></div>
-                        <div className="absolute top-0 -right-4 w-72 h-72 bg-indigo-100 dark:bg-indigo-900/20 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl opacity-30 dark:opacity-20 animate-blob animation-delay-2000"></div>
+                        {/* Abstract decorative blobs removed for professional look */}
 
                         {/* Main Image Container */}
                         <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-900/10 dark:shadow-blue-900/20 border-4 border-white dark:border-slate-800 transform rotate-3 hover:rotate-0 transition-all duration-700">
