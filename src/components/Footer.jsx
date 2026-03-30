@@ -72,10 +72,10 @@ export default function Footer() {
                                 <a href="https://github.com/himmatmundhe07" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all text-slate-400">
                                     <Github size={20} />
                                 </a>
-                                <a href="https://linkedin.com/in/himmat-mundhe-17b5a1213" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all text-slate-400">
+                                <a href="https://www.linkedin.com/in/himmat-mundhe" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all text-slate-400">
                                     <Linkedin size={20} />
                                 </a>
-                                <a href="https://twitter.com/himmat_mundhe" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-sky-500 hover:text-white transition-all text-slate-400">
+                                <a href="https://x.com/Himmat_Mundhe" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-sky-500 hover:text-white transition-all text-slate-400">
                                     <Twitter size={20} />
                                 </a>
                             </div>

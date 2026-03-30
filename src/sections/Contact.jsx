@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import { Mail, Loader2, Send, Github, Linkedin, ExternalLink, Youtube, Phone } from 'lucide-react';
+import { Mail, Loader2, Send, Github, Linkedin, ExternalLink, Youtube, Phone, Twitter } from 'lucide-react';
 import { SiLeetcode } from 'react-icons/si';
 
 export default function Contact() {
@@ -105,7 +105,7 @@ export default function Contact() {
                                     <span className="font-medium">himmat.mundhe.cg@gmail.com</span>
                                 </a>
 
-                                <a href="https://linkedin.com/in/himmat-mundhe-17b5a1213" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-slate-600 dark:text-slate-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors group">
+                                <a href="https://www.linkedin.com/in/himmat-mundhe" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-slate-600 dark:text-slate-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors group">
                                     <div className="w-12 h-12 bg-blue-50 dark:bg-slate-700 rounded-full flex items-center justify-center text-blue-700 dark:text-blue-400 group-hover:bg-blue-700 group-hover:text-white transition-all duration-300">
                                         <Linkedin size={22} />
                                     </div>
@@ -125,6 +125,14 @@ export default function Contact() {
                                         <Youtube size={22} />
                                     </div>
                                     <span className="font-medium">YouTube Channel</span>
+                                    <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
+                                </a>
+
+                                <a href="https://x.com/Himmat_Mundhe" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors group">
+                                    <div className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-900 dark:text-white group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
+                                        <Twitter size={22} />
+                                    </div>
+                                    <span className="font-medium">X (Twitter)</span>
                                     <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
                                 </a>
 

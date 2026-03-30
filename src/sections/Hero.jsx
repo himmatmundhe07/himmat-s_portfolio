@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowRight, Download, Youtube } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight, Download, Youtube, Twitter } from "lucide-react";
 import { Typewriter } from 'react-simple-typewriter';
 import profileImage from "../assets/himmat.png";
 
@@ -102,7 +102,7 @@ export default function Hero() {
                             <Github size={28} />
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/himmat-mundhe-17b5a1213"
+                            href="https://www.linkedin.com/in/himmat-mundhe"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors p-2 hover:bg-blue-50 dark:hover:bg-slate-800 rounded-full"
@@ -122,6 +122,14 @@ export default function Hero() {
                             className="hover:text-red-500 dark:hover:text-red-400 transition-colors p-2 hover:bg-red-50 dark:hover:bg-slate-800 rounded-full"
                         >
                             <Youtube size={32} />
+                        </a>
+                        <a
+                            href="https://x.com/Himmat_Mundhe"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-slate-900 dark:hover:text-white transition-colors p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full"
+                        >
+                            <Twitter size={28} />
                         </a>
                     </motion.div>
                 </motion.div>
