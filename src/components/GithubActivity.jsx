@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GitHubCalendar } from 'react-github-calendar';
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 export default function GithubActivity() {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(() => {
+        if (typeof document === "undefined") return "light";
+        return document.documentElement.classList.contains("dark") ? "dark" : "light";
+    });
+    const sectionRef = useRef(null);
+    const showCalendar = useInView(sectionRef, { once: true, margin: "200px" });
 
     useEffect(() => {
-        // Detect theme from html or body class
-        const isDark = document.documentElement.classList.contains('dark');
-        setTheme(isDark ? 'dark' : 'light');
-
-        // Observer for theme changes
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 if (mutation.attributeName === 'class') {
@@ -30,7 +30,7 @@ export default function GithubActivity() {
     };
 
     return (
-        <section className="py-12 bg-transparent transition-colors duration-300">
+        <section ref={sectionRef} className="py-12 bg-transparent transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6 flex justify-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -43,17 +43,21 @@ export default function GithubActivity() {
                     </h2>
 
                     <div className="flex justify-center overflow-hidden pb-4">
-                        <GitHubCalendar
-                            username="himmatmundhe07"
-                            blockSize={15}
-                            blockMargin={5}
-                            colorScheme={theme}
-                            fontSize={14}
-                            theme={explicitTheme}
-                            style={{
-                                color: theme === 'dark' ? '#cbd5e1' : '#475569',
-                            }}
-                        />
+                        {showCalendar ? (
+                            <GitHubCalendar
+                                username="himmatmundhe07"
+                                blockSize={15}
+                                blockMargin={5}
+                                colorScheme={theme}
+                                fontSize={14}
+                                theme={explicitTheme}
+                                style={{
+                                    color: theme === 'dark' ? '#cbd5e1' : '#475569',
+                                }}
+                            />
+                        ) : (
+                            <div className="h-[140px] w-full max-w-4xl bg-slate-100/70 dark:bg-slate-800/60 rounded-xl animate-pulse"></div>
+                        )}
                     </div>
                 </motion.div>
             </div>

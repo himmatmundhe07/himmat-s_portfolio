@@ -33,3 +33,15 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-slate-400 dark:bg-slate-600;
 }
+
+@supports (content-visibility: auto) {
+  main > section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 900px;
+  }
+
+  main > section#home {
+    content-visibility: visible;
+    contain-intrinsic-size: auto;
+  }
+}

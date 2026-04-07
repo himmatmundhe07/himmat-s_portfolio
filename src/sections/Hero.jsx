@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowRight, Download, Youtube, Twitter } from "lucide-react";
-import { Typewriter } from 'react-simple-typewriter';
-import profileImage from "../assets/himmat.png";
+import { SiLeetcode } from "react-icons/si";
+import { Typewriter } from "react-simple-typewriter";
+import fallbackProfileImage from "../assets/himmat.png";
 
 export default function Hero() {
     const container = {
@@ -27,13 +28,7 @@ export default function Hero() {
             className="min-h-screen flex items-center bg-transparent pt-20 overflow-hidden transition-colors duration-300"
         >
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center w-full">
-                {/* Left Column: Text Content */}
-                <motion.div
-                    variants={container}
-                    initial="hidden"
-                    animate="show"
-                    className="text-left order-2 md:order-1"
-                >
+                <motion.div variants={container} initial="hidden" animate="show" className="text-left order-2 md:order-1">
                     <motion.div variants={item} className="mb-4 flex items-center gap-3">
                         <span className="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-semibold tracking-wide uppercase border border-blue-100 dark:border-blue-800">
                             Portfolio
@@ -45,18 +40,22 @@ export default function Hero() {
                         variants={item}
                         className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading text-slate-900 dark:text-white mb-4 tracking-tight leading-tight"
                     >
-                        Hi, I’m <br />
+                        Hi, I am <br />
                         <span className="text-blue-600 dark:text-blue-500 relative inline-block">
                             <Typewriter
-                                words={['Himmat', 'a MERN Developer', 'a UI/UX Designer']}
+                                words={["Himmat Mundhe", "a MERN Developer", "a UI/UX Designer"]}
                                 loop={0}
                                 cursor
-                                cursorStyle='|'
+                                cursorStyle="|"
                                 typeSpeed={120}
                                 deleteSpeed={80}
                                 delaySpeed={1500}
                             />
-                            <svg className="absolute w-full h-3 -bottom-1 left-0 text-blue-200 dark:text-blue-900 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <svg
+                                className="absolute w-full h-3 -bottom-1 left-0 text-blue-200 dark:text-blue-900 -z-10"
+                                viewBox="0 0 100 10"
+                                preserveAspectRatio="none"
+                            >
                                 <path d="M0 5 Q 50 10 100 5 L 100 0 Q 50 5 0 0 Z" fill="currentColor" />
                             </svg>
                         </span>
@@ -67,10 +66,10 @@ export default function Hero() {
                         className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-lg mb-10 leading-relaxed font-light"
                     >
                         <strong className="font-semibold text-slate-900 dark:text-white block mb-4">
-                            I build production-grade, full-stack systems with a focus on clean code and scalable architecture.
+                            I build production-grade full-stack systems focused on clean architecture and real user impact.
                         </strong>
-                        A first-year CSE student specializing in the MERN stack, experienced in building
-                        healthcare platforms, real-time communication tools, and intuitive UI/UX designs.
+                        CSE student and builder from Ahmedabad, Gujarat, working across MERN apps, emergency health tech,
+                        interactive web experiences, and UI/UX design.
                     </motion.p>
 
                     <motion.div variants={item} className="flex flex-wrap gap-4 mb-12">
@@ -87,12 +86,12 @@ export default function Hero() {
                             href="#contact"
                             className="group px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 font-medium rounded-xl hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-md transition-all flex items-center gap-2 active:scale-95"
                         >
-                            Let's Talk
+                            Let us Talk
                             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </a>
                     </motion.div>
 
-                    <motion.div variants={item} className="flex gap-6 text-slate-900 dark:text-slate-400">
+                    <motion.div variants={item} className="flex gap-4 flex-wrap text-slate-900 dark:text-slate-400">
                         <a
                             href="https://github.com/himmatmundhe07"
                             target="_blank"
@@ -102,7 +101,7 @@ export default function Hero() {
                             <Github size={28} />
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/himmat-mundhe"
+                            href="https://www.linkedin.com/in/himmat-mundhe/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors p-2 hover:bg-blue-50 dark:hover:bg-slate-800 rounded-full"
@@ -110,10 +109,18 @@ export default function Hero() {
                             <Linkedin size={28} />
                         </a>
                         <a
-                            href="mailto:himmat.mundhe.cg@gmail.com"
+                            href="mailto:himmatmundhe07@gmail.com"
                             className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors p-2 hover:bg-amber-50 dark:hover:bg-slate-800 rounded-full"
                         >
                             <Mail size={28} />
+                        </a>
+                        <a
+                            href="https://leetcode.com/u/Mundhe_Himmat/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors p-2 hover:bg-yellow-50 dark:hover:bg-slate-800 rounded-full"
+                        >
+                            <SiLeetcode size={28} />
                         </a>
                         <a
                             href="https://www.youtube.com/@himmatmundhe07"
@@ -134,7 +141,6 @@ export default function Hero() {
                     </motion.div>
                 </motion.div>
 
-                {/* Right Column: Image */}
                 <motion.div
                     initial={{ opacity: 0, x: 50, scale: 0.9 }}
                     animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -142,20 +148,17 @@ export default function Hero() {
                     className="relative order-1 md:order-2 flex justify-center md:justify-end"
                 >
                     <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px]">
-                        {/* Abstract decorative blobs removed for professional look */}
-
-                        {/* Main Image Container */}
                         <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-900/10 dark:shadow-blue-900/20 border-4 border-white dark:border-slate-800 transform rotate-3 hover:rotate-0 transition-all duration-700">
                             <img
-                                src={profileImage}
-                                alt="Himmat"
+                                src={fallbackProfileImage}
+                                alt="Himmat Mundhe"
                                 className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                                loading="eager"
+                                decoding="async"
                             />
-                            {/* Overlay gradient for better text contrast if needed, mostly for aesthetics */}
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent"></div>
                         </div>
 
-                        {/* Floating Badge */}
                         <motion.div
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}

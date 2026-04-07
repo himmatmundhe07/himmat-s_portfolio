@@ -1,0 +1,17 @@
+{
+  "name": "Himmat Mundhe Portfolio",
+  "short_name": "Himmat",
+  "description": "Portfolio website of Himmat Mundhe, Full Stack Developer.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f7",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
