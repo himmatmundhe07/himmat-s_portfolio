@@ -128,14 +128,6 @@
     }
   </script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXP0FHDSG7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-RXP0FHDSG7');
   </script>
 </head>
 
@@ -169,6 +161,17 @@
   </noscript>
 
   <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Non-Blocking Google Analytics moved to End of Body -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-RXP0FHDSG7"></script>
+  <script defer>
+    window.addEventListener('load', function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-RXP0FHDSG7');
+    });
+  </script>
 </body>
 
 </html>
