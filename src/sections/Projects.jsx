@@ -37,7 +37,7 @@ const projects = [
             github: "https://github.com/himmatmundhe07/Sanjeevani",
             certificate: "https://drive.google.com/file/d/1CUqwkBa9A4THL1WIBSU-8OvpP7G0hU2x/view?usp=sharing",
         },
-        color: "bg-emerald-600",
+        color: "bg-emerald-700 dark:bg-emerald-600",
     },
     {
         category: "frontend",
@@ -238,10 +238,10 @@ export default function Projects() {
                                             <span className="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Full Stack</span>
                                         )}
                                         {project.category === "frontend" && (
-                                            <span className="bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Frontend</span>
+                                            <span className="bg-emerald-700/90 dark:bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Frontend</span>
                                         )}
                                         {project.category === "clones" && (
-                                            <span className="bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Clone</span>
+                                            <span className="bg-emerald-700/90 dark:bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Clone</span>
                                         )}
                                         {project.category === "games" && (
                                             <span className="bg-amber-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Game</span>
@@ -264,7 +264,7 @@ export default function Projects() {
                                             {project.tech.map((t) => (
                                                 <span
                                                     key={t}
-                                                    className="text-xs font-medium text-slate-600 dark:text-slate-300 bg-slate-200/50 dark:bg-slate-700/50 px-2 py-1 rounded border border-slate-200 dark:border-slate-600"
+                                                    className="text-xs font-bold text-slate-800 dark:text-slate-100 bg-slate-200/50 dark:bg-slate-700/50 px-2 py-1 rounded border border-slate-300 dark:border-slate-600"
                                                 >
                                                     {t}
                                                 </span>

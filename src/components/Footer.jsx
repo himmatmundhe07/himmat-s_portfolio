@@ -63,19 +63,19 @@ export default function Footer() {
                         <div>
                             <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Follow Me</h4>
                             <div className="flex flex-wrap gap-3">
-                                <a href="https://github.com/himmatmundhe07" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all text-slate-400">
+                                <a href="https://github.com/himmatmundhe07" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="bg-slate-800 p-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all text-slate-400">
                                     <Github size={20} />
                                 </a>
-                                <a href="https://www.linkedin.com/in/himmat-mundhe/" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all text-slate-400">
+                                <a href="https://www.linkedin.com/in/himmat-mundhe/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="bg-slate-800 p-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all text-slate-400">
                                     <Linkedin size={20} />
                                 </a>
-                                <a href="https://leetcode.com/u/Mundhe_Himmat/" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-amber-500 hover:text-white transition-all text-slate-400">
+                                <a href="https://leetcode.com/u/Mundhe_Himmat/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode Profile" className="bg-slate-800 p-2 rounded-lg hover:bg-amber-500 hover:text-white transition-all text-slate-400">
                                     <SiLeetcode size={20} />
                                 </a>
-                                <a href="https://www.youtube.com/@himmatmundhe07" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-red-600 hover:text-white transition-all text-slate-400">
+                                <a href="https://www.youtube.com/@himmatmundhe07" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel" className="bg-slate-800 p-2 rounded-lg hover:bg-red-600 hover:text-white transition-all text-slate-400">
                                     <Youtube size={20} />
                                 </a>
-                                <a href="https://x.com/Himmat_Mundhe" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2 rounded-lg hover:bg-sky-500 hover:text-white transition-all text-slate-400">
+                                <a href="https://x.com/Himmat_Mundhe" target="_blank" rel="noopener noreferrer" aria-label="X Profile" className="bg-slate-800 p-2 rounded-lg hover:bg-sky-500 hover:text-white transition-all text-slate-400">
                                     <Twitter size={20} />
                                 </a>
                             </div>

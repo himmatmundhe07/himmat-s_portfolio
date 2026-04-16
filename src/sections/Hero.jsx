@@ -97,6 +97,7 @@ export default function Hero() {
                             href="https://github.com/himmatmundhe07"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="GitHub Profile"
                             className="hover:text-blue-600 dark:hover:text-white transition-colors p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full"
                         >
                             <Github size={28} />
@@ -105,12 +106,14 @@ export default function Hero() {
                             href="https://www.linkedin.com/in/himmat-mundhe/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="LinkedIn Profile"
                             className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors p-2 hover:bg-blue-50 dark:hover:bg-slate-800 rounded-full"
                         >
                             <Linkedin size={28} />
                         </a>
                         <a
                             href="mailto:himmatmundhe07@gmail.com"
+                            aria-label="Email Me"
                             className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors p-2 hover:bg-amber-50 dark:hover:bg-slate-800 rounded-full"
                         >
                             <Mail size={28} />
@@ -119,6 +122,7 @@ export default function Hero() {
                             href="https://leetcode.com/u/Mundhe_Himmat/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="LeetCode Profile"
                             className="hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors p-2 hover:bg-yellow-50 dark:hover:bg-slate-800 rounded-full"
                         >
                             <SiLeetcode size={28} />
@@ -127,6 +131,7 @@ export default function Hero() {
                             href="https://www.youtube.com/@himmatmundhe07"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="YouTube Channel"
                             className="hover:text-red-500 dark:hover:text-red-400 transition-colors p-2 hover:bg-red-50 dark:hover:bg-slate-800 rounded-full"
                         >
                             <Youtube size={32} />
@@ -135,6 +140,7 @@ export default function Hero() {
                             href="https://x.com/Himmat_Mundhe"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="X Profile"
                             className="hover:text-slate-900 dark:hover:text-white transition-colors p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full"
                         >
                             <Twitter size={28} />

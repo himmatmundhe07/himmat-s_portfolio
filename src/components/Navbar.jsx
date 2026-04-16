@@ -82,6 +82,7 @@ export default function Navbar() {
 
                     <button
                         onClick={() => setDarkMode(!darkMode)}
+                        aria-label="Toggle Theme"
                         className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors focus:outline-none"
                     >
                         {darkMode ? <Sun size={20} /> : <Moon size={20} />}
@@ -91,12 +92,13 @@ export default function Navbar() {
                 <div className="md:hidden flex items-center gap-4 z-10">
                     <button
                         onClick={() => setDarkMode(!darkMode)}
+                        aria-label="Toggle Theme Mobile"
                         className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors focus:outline-none"
                     >
                         {darkMode ? <Sun size={20} /> : <Moon size={20} />}
                     </button>
 
-                    <button onClick={() => setIsOpen(!isOpen)} className="text-slate-900 dark:text-white focus:outline-none">
+                    <button aria-label="Toggle Menu" onClick={() => setIsOpen(!isOpen)} className="text-slate-900 dark:text-white focus:outline-none">
                         {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>

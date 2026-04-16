@@ -298,7 +298,7 @@ export default function Hackathons() {
                                                 href={selectedHackathon.links.live}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="w-full py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2 text-sm"
+                                                className="w-full py-2.5 px-3 bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 text-sm"
                                             >
                                                 <ExternalLink size={15} />
                                                 Live Demo

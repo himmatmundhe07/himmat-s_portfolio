@@ -115,7 +115,7 @@ export default function FigmaDesigns() {
                                     {project.tech.map((t) => (
                                         <span
                                             key={t}
-                                            className="text-xs font-semibold text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded border border-slate-200 dark:border-slate-600"
+                                            className="text-xs font-bold text-slate-800 dark:text-slate-100 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded border border-slate-300 dark:border-slate-600"
                                         >
                                             {t}
                                         </span>
