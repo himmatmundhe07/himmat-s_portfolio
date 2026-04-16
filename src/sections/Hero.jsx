@@ -64,9 +64,9 @@ export default function Hero() {
 
                     <motion.p
                         variants={item}
-                        className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-lg mb-10 leading-relaxed font-light"
+                        className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-lg mb-10 leading-relaxed font-normal"
                     >
-                        <strong className="font-semibold text-slate-900 dark:text-white block mb-4">
+                        <strong className="font-bold text-slate-900 dark:text-white block mb-4">
                             I build production-grade full-stack systems focused on clean architecture and real user impact.
                         </strong>
                         CSE student and builder from Ahmedabad, Gujarat, working across MERN apps, emergency health tech,

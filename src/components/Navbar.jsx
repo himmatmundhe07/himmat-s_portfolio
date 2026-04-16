@@ -73,7 +73,8 @@ export default function Navbar() {
                         <NavLink
                             key={link.name}
                             to={link.href}
-                            className={({ isActive }) => `text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-200 text-sm tracking-wide relative group cursor-pointer ${isActive ? "text-blue-600 dark:text-blue-400 font-semibold" : ""}`}
+                            aria-current={({ isActive }) => (isActive ? "page" : undefined)}
+                            className={({ isActive }) => `text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold transition-colors duration-200 text-sm tracking-wide relative group cursor-pointer ${isActive ? "text-blue-600 dark:text-blue-400" : ""}`}
                         >
                             {link.name}
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
@@ -115,6 +116,7 @@ export default function Navbar() {
                         <NavLink
                             key={link.name}
                             to={link.href}
+                            aria-current={({ isActive }) => (isActive ? "page" : undefined)}
                             className={({ isActive }) => `text-slate-600 dark:text-slate-300 text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer ${isActive ? "text-blue-600 dark:text-blue-400" : ""}`}
                             onClick={() => setIsOpen(false)}
                         >

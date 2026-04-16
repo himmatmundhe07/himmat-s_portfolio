@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Coffee, Globe } from "lucide-react";
+import { Code } from "lucide-react";
 
 export default function About() {
     return (
@@ -21,7 +21,7 @@ export default function About() {
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8 font-heading leading-tight">
                             CSE Student & <br />
-                            <span className="text-slate-500 dark:text-slate-400">MERN Stack Developer</span>
+                            <span className="text-slate-600 dark:text-slate-400">MERN Stack Developer</span>
                         </h2>
 
                         <div className="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -33,20 +33,20 @@ export default function About() {
                             </p>
                         </div>
 
-                        <div className="mt-10 flex gap-6">
+                        <div className="mt-10 flex gap-6 text-center md:text-left">
                             <div className="flex flex-col gap-1">
                                 <span className="text-3xl font-bold text-blue-600 dark:text-blue-400 font-heading">150+</span>
-                                <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide font-medium">LeetCode Solved</span>
+                                <span className="text-sm text-slate-600 dark:text-slate-400 uppercase tracking-wide font-bold">LeetCode Solved</span>
                             </div>
                             <div className="w-px h-12 bg-slate-200 dark:bg-slate-700"></div>
                             <div className="flex flex-col gap-1">
                                 <span className="text-3xl font-bold text-blue-600 dark:text-blue-400 font-heading">10+</span>
-                                <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide font-medium">Projects Built</span>
+                                <span className="text-sm text-slate-600 dark:text-slate-400 uppercase tracking-wide font-bold">Projects Built</span>
                             </div>
                             <div className="w-px h-12 bg-slate-200 dark:bg-slate-700"></div>
                             <div className="flex flex-col gap-1">
                                 <span className="text-3xl font-bold text-blue-600 dark:text-blue-400 font-heading">10</span>
-                                <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide font-medium">Sem 1 SCPA</span>
+                                <span className="text-sm text-slate-600 dark:text-slate-400 uppercase tracking-wide font-bold">Sem 1 SCPA</span>
                             </div>
                         </div>
                     </div>
@@ -56,14 +56,14 @@ export default function About() {
                         <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-900 relative shadow-2xl shadow-slate-900/10 dark:shadow-black/30 group">
                             <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-950"></div>
 
-                            {/* Simulated Code Editor or abstract tech visual */}
-                            <div className="absolute inset-4 bg-slate-900 rounded-xl border border-slate-700/50 p-6 overflow-hidden">
+                            {/* Simulated Code Editor */}
+                            <div className="absolute inset-4 bg-slate-900 rounded-xl border border-slate-700/50 p-6 overflow-hidden" aria-label="Visual representation of developer identity as code">
                                 <div className="flex gap-2 mb-4">
                                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
                                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                                 </div>
-                                <div className="space-y-3 font-mono text-sm">
+                                <div className="space-y-3 font-mono text-xs md:text-sm">
                                     <div className="flex gap-2">
                                         <span className="text-pink-400">const</span>
                                         <span className="text-blue-400">developer</span>
@@ -76,11 +76,11 @@ export default function About() {
                                     </div>
                                     <div className="pl-6 flex gap-2">
                                         <span className="text-slate-400">role:</span>
-                                        <span className="text-green-400">'MERN Stack Developer'</span>,
+                                        <span className="text-green-400">'MERN Stack'</span>,
                                     </div>
                                     <div className="pl-6 flex gap-2">
-                                        <span className="text-slate-400">skills:</span>
-                                        <span className="text-yellow-300">['React', 'Node', 'TypeScript']</span>
+                                        <span className="text-slate-400">focus:</span>
+                                        <span className="text-yellow-300">['Clean Code', 'Performance']</span>
                                     </div>
                                     <div className="text-yellow-300">{"}"}</div>
                                 </div>

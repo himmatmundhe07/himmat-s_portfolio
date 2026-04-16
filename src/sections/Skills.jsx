@@ -54,7 +54,7 @@ export default function Skills() {
                     <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 font-heading">
                         Technical Skills
                     </h2>
-                    <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
                         My technical toolbox. I'm always adding more tools to my arsenal.
                     </p>
                 </motion.div>
@@ -76,9 +76,9 @@ export default function Skills() {
                                 {items.map((skill) => (
                                     <div
                                         key={skill.name}
-                                        className="flex items-center gap-2 bg-white dark:bg-slate-700/50 text-slate-700 dark:text-slate-200 px-3 py-2 rounded-lg text-sm font-medium border border-slate-100 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 hover:bg-slate-100 dark:hover:bg-slate-600 transition-all cursor-default select-none"
+                                        className="flex items-center gap-2 bg-white dark:bg-slate-700/50 text-slate-800 dark:text-slate-100 px-3 py-2 rounded-lg text-sm font-bold border border-slate-200 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 hover:bg-slate-100 dark:hover:bg-slate-600 transition-all cursor-default select-none shadow-sm"
                                     >
-                                        <span className="text-lg">{skill.icon}</span>
+                                        <span className="text-lg" aria-hidden="true">{skill.icon}</span>
                                         <span>{skill.name}</span>
                                     </div>
                                 ))}
