@@ -18,15 +18,15 @@ import mallWebsiteImage from "../assets/mall-website.png";
 import educationSiteImage from "../assets/education-site.png";
 
 const categories = [
-    { id: "functional", label: "Functional Apps", icon: Layers },
-    { id: "clones", label: "Website Clones", icon: Layout },
-    { id: "games", label: "Interactive Games", icon: Gamepad2 },
-    { id: "designs", label: "UI/UX Design", icon: Pen },
+    { id: "full_stack", label: "Full Stack", icon: Layers },
+    { id: "frontend", label: "Frontend", icon: Layout },
+    { id: "clones", label: "Clones", icon: Layers },
+    { id: "games", label: "Games", icon: Gamepad2 },
 ];
 
 const projects = [
     {
-        category: "functional",
+        category: "full_stack",
         title: "Sanjeevani",
         tagline: "AI-Powered Emergency Healthcare Ecosystem",
         description: "An advanced emergency healthcare platform that bridges the critical information gap between accidents and hospitals with real-time biometric scanning and AI triage intelligence.",
@@ -40,7 +40,7 @@ const projects = [
         color: "bg-emerald-600",
     },
     {
-        category: "functional",
+        category: "frontend",
         title: "Taaza Khabar",
         tagline: "Real-time News and Weather Portal",
         description: "A centralized hub for breaking news and live weather updates with high-performance layouts, smart filtering, and real-time global API integration.",
@@ -53,7 +53,7 @@ const projects = [
         color: "bg-red-500",
     },
     {
-        category: "functional",
+        category: "full_stack",
         title: "Air Talk",
         tagline: "Bluetooth Offline Messenger",
         description: "A decentralized mobile messenger for situations without Internet or SIM, built on Bluetooth RFCOMM for secure peer-to-peer communication.",
@@ -158,58 +158,11 @@ const projects = [
         },
         color: "bg-purple-600",
     },
-    {
-        category: "designs",
-        title: "Flight Booking UI/UX",
-        tagline: "End-to-End Booking Flow",
-        description: "High-fidelity Figma booking flow with reusable components and progressive disclosure for better conversion and clarity.",
-        tech: ["Figma", "UI/UX", "Prototyping", "Design System"],
-        image: flightBookingImage,
-        links: {
-            figma: "https://www.figma.com/design/Cwx3aXDvJ9tM0QU760L0iw/work?node-id=362-1612&t=JFYDWb9Cwte8Hqp5-1",
-        },
-        color: "bg-violet-600",
-    },
-    {
-        category: "designs",
-        title: "CodingGita Website Clone (Design)",
-        tagline: "Educational Platform Design Clone",
-        description: "A pixel-perfect Figma recreation of CodingGita focused on layout discipline, hierarchy, and developer-friendly branding.",
-        tech: ["Figma", "Web Design", "Layout", "UI Clone"],
-        image: codingGitaImage,
-        links: {
-            figma: "https://www.figma.com/design/Cwx3aXDvJ9tM0QU760L0iw/work?node-id=59-352&t=JFYDWb9Cwte8Hqp5-1",
-        },
-        color: "bg-slate-700",
-    },
-    {
-        category: "designs",
-        title: "Mall Website (Design)",
-        tagline: "Retail Experience Interface",
-        description: "Modern shopping mall website design with storefront discovery, promotional sections, and high-clarity navigation structures.",
-        tech: ["Figma", "E-Commerce", "UI/UX", "Wireframing"],
-        image: mallWebsiteImage,
-        links: {
-            figma: "https://www.figma.com/design/Cwx3aXDvJ9tM0QU760L0iw/work?node-id=472-3736&t=JFYDWb9Cwte8Hqp5-1",
-        },
-        color: "bg-cyan-700",
-    },
-    {
-        category: "designs",
-        title: "Educational Website (Design)",
-        tagline: "Learning Platform Experience",
-        description: "A clean educational interface with course discovery, dashboard patterns, and accessibility-driven information architecture.",
-        tech: ["Figma", "EdTech", "Dashboard", "Prototyping"],
-        image: educationSiteImage,
-        links: {
-            figma: "https://www.figma.com/design/Cwx3aXDvJ9tM0QU760L0iw/work?node-id=213-558&t=JFYDWb9Cwte8Hqp5-1",
-        },
-        color: "bg-emerald-700",
-    },
+
 ];
 
 export default function Projects() {
-    const [activeCategory, setActiveCategory] = useState("functional");
+    const [activeCategory, setActiveCategory] = useState("full_stack");
 
     const filteredProjects = projects.filter((project) => project.category === activeCategory);
 
@@ -226,7 +179,7 @@ export default function Projects() {
                         Selected Projects
                     </h2>
                     <p className="text-slate-600 dark:text-slate-300 text-lg max-w-2xl mx-auto">
-                        Functional apps, website clones, games, and UI/UX design work from my project lab.
+                        Full Stack platforms, frontend experiences, and interactive games built from the ground up.
                     </p>
                 </motion.div>
 
@@ -281,17 +234,17 @@ export default function Projects() {
                                     )}
 
                                     <div className="absolute top-4 right-4 z-20">
-                                        {project.category === "functional" && (
-                                            <span className="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">App</span>
+                                        {project.category === "full_stack" && (
+                                            <span className="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Full Stack</span>
+                                        )}
+                                        {project.category === "frontend" && (
+                                            <span className="bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Frontend</span>
                                         )}
                                         {project.category === "clones" && (
                                             <span className="bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Clone</span>
                                         )}
                                         {project.category === "games" && (
                                             <span className="bg-amber-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Game</span>
-                                        )}
-                                        {project.category === "designs" && (
-                                            <span className="bg-violet-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Design</span>
                                         )}
                                     </div>
                                 </div>

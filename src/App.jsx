@@ -4,15 +4,19 @@ import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring } 
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
-import Journey from "./sections/Journey";
-import Projects from "./sections/Projects";
-import Hackathons from "./sections/Hackathons";
-import Experience from "./sections/Experience";
 import Skills from "./sections/Skills";
-import Certificates from "./sections/Certificates";
-import Contact from "./sections/Contact";
+
+// Lazy-loaded components for optimal bundle splitting (Below the fold)
+const Projects = React.lazy(() => import("./sections/Projects"));
+const FigmaDesigns = React.lazy(() => import("./sections/FigmaDesigns"));
+const Hackathons = React.lazy(() => import("./sections/Hackathons"));
+const Experience = React.lazy(() => import("./sections/Experience"));
+const Certificates = React.lazy(() => import("./sections/Certificates"));
+const Contact = React.lazy(() => import("./sections/Contact"));
+const GithubActivity = React.lazy(() => import("./components/GithubActivity"));
+const Journey = React.lazy(() => import("./sections/Journey"));
+
 import Footer from "./components/Footer";
-import GithubActivity from "./components/GithubActivity";
 import ScrollToTop from "./components/ScrollToTop";
 import LiveBackground from "./components/LiveBackground";
 import Loader from "./components/Loader";
@@ -124,13 +128,16 @@ function App() {
           <Hero />
           <About />
           <Skills />
-          <Projects />
-          <Hackathons />
-          <Experience />
-          <Certificates />
-          <GithubActivity />
-          <Journey />
-          <Contact />
+          <React.Suspense fallback={<div className="h-40 flex items-center justify-center text-slate-500">Loading section...</div>}>
+            <Projects />
+            <FigmaDesigns />
+            <Hackathons />
+            <Experience />
+            <Certificates />
+            <GithubActivity />
+            <Journey />
+            <Contact />
+          </React.Suspense>
         </main>
         <Footer />
       </div>

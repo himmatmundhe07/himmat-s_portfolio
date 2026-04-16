@@ -1,21 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ArrowUp } from "lucide-react";
+import { useScroll, useMotionValueEvent } from "framer-motion";
 
 export default function ScrollToTop() {
     const [visible, setVisible] = useState(false);
 
-    useEffect(() => {
-        const toggleVisibility = () => {
-            if (window.scrollY > 300) {
-                setVisible(true);
-            } else {
-                setVisible(false);
-            }
-        };
+    const { scrollY } = useScroll();
 
-        window.addEventListener("scroll", toggleVisibility);
-        return () => window.removeEventListener("scroll", toggleVisibility);
-    }, []);
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        setVisible(latest > 300);
+    });
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });

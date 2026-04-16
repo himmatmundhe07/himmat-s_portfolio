@@ -29,6 +29,7 @@ export default function Footer() {
                                     "About",
                                     "Skills",
                                     "Projects",
+                                    "Designs",
                                     "Hackathons",
                                     "Experience",
                                     "Certificates",

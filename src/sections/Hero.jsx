@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowRight, Download, Youtube, Twitter } from "lucide-react";
 import { SiLeetcode } from "react-icons/si";
 import { Typewriter } from "react-simple-typewriter";
-import fallbackProfileImage from "../assets/himmat.png";
+import { Javascript, Typescript } from "lucide-react";
 
 export default function Hero() {
     const container = {
@@ -151,10 +151,11 @@ export default function Hero() {
                     <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px]">
                         <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-900/10 dark:shadow-blue-900/20 border-4 border-white dark:border-slate-800 transform rotate-3 hover:rotate-0 transition-all duration-700">
                             <img
-                                src={fallbackProfileImage}
+                                src="/himmat.webp"
                                 alt="Himmat Mundhe"
                                 className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                                 loading="eager"
+                                fetchpriority="high"
                                 decoding="async"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent"></div>

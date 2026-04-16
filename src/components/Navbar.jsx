@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useMotionValueEvent } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 const navLinks = [
@@ -8,6 +8,7 @@ const navLinks = [
     { name: "About", href: "/about" },
     { name: "Skills", href: "/skills" },
     { name: "Projects", href: "/projects" },
+    { name: "Designs", href: "/designs" },
     { name: "Hackathons", href: "/hackathons" },
     { name: "Experience", href: "/experience" },
     { name: "Certificates", href: "/certificates" },
@@ -28,11 +29,16 @@ export default function Navbar() {
         return false;
     });
 
-    const { scrollYProgress } = useScroll();
+    const { scrollYProgress, scrollY } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
         restDelta: 0.001,
+    });
+
+    // Batched efficient scroll reading without layout thrashing
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        setScrolled(latest > 50);
     });
 
     useEffect(() => {
@@ -44,21 +50,6 @@ export default function Navbar() {
             localStorage.setItem("theme", "light");
         }
     }, [darkMode]);
-
-    useEffect(() => {
-        let ticking = false;
-        const handleScroll = () => {
-            if (ticking) return;
-            ticking = true;
-            window.requestAnimationFrame(() => {
-                const nextScrolled = window.scrollY > 50;
-                setScrolled((prev) => (prev === nextScrolled ? prev : nextScrolled));
-                ticking = false;
-            });
-        };
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     return (
         <nav
