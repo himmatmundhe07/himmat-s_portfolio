@@ -132,7 +132,19 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Elite Optimization: Pre-rendered HTML Skeleton to bypass React execution bottleneck for LCP text -->
+    <div style="padding-top: 120px; padding-left: 24px; padding-right: 24px; max-width: 1280px; margin: 0 auto; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">
+      <h1 style="font-size: 3rem; font-weight: 700; color: #0f172a; margin-bottom: 1.5rem;">
+        Hi, I am <br> Himmat Mundhe
+      </h1>
+      <p style="max-width: 32rem; color: #475569; font-size: 1.125rem;">
+        <strong style="display: block; font-weight: 600; color: #0f172a; margin-bottom: 1rem;">
+          I build production-grade full-stack systems focused on clean architecture and real user impact.
+        </strong>
+      </p>
+    </div>
+  </div>
 
   <!-- Fallback content for pure HTML SEO crawlers (Non-JS rendering) -->
   <noscript>
