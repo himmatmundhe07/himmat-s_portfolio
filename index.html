@@ -162,14 +162,20 @@
 
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- Non-Blocking Google Analytics moved to End of Body -->
-  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-RXP0FHDSG7"></script>
-  <script defer>
+  <!-- Extremely Delayed Google Analytics Execution -->
+  <script>
     window.addEventListener('load', function() {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-RXP0FHDSG7');
+      setTimeout(function() {
+        var gtagScript = document.createElement('script');
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-RXP0FHDSG7";
+        gtagScript.async = true;
+        document.body.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RXP0FHDSG7');
+      }, 4000); // Wait 4 full seconds to completely vacate the main thread
     });
   </script>
 </body>
