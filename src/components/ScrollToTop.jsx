@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
-import { Link, animateScroll } from "react-scroll";
 
 export default function ScrollToTop() {
     const [visible, setVisible] = useState(false);
@@ -19,7 +18,7 @@ export default function ScrollToTop() {
     }, []);
 
     const scrollToTop = () => {
-        animateScroll.scrollToTop();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (

@@ -6,7 +6,7 @@ const timelineData = [
     {
         year: "2025 - Present",
         title: "B.E. in Computer Engineering",
-        description: "Pursuing Bachelor's in Computer Engineering at Swaminarayan University, Kalol. CGPA: 9.2/10. Specializing in Full Stack Development (MERN) and System Design through Coding Gita collaboration.",
+        description: "Pursuing Bachelor's in Computer Engineering at Swaminarayan University, Kalol. Semester 1 SCPA: 10/10. Specializing in Full Stack Development (MERN) and System Design through Coding Gita collaboration.",
         type: "Education",
     },
     {

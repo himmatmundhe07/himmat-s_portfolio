@@ -1,7 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Twitter, Youtube } from "lucide-react";
 import { SiLeetcode } from "react-icons/si";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -12,7 +12,7 @@ export default function Footer() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid md:grid-cols-4 gap-12 mb-12">
                         <div className="md:col-span-1">
-                            <Link to="home" smooth={true} duration={500} className="text-2xl font-bold font-heading text-white cursor-pointer inline-block mb-4">
+                            <Link to="/" className="text-2xl font-bold font-heading text-white cursor-pointer inline-block mb-4">
                                 Himmat<span className="text-blue-500">.</span>
                             </Link>
                             <p className="text-slate-400 text-sm leading-relaxed mb-4">
@@ -27,16 +27,17 @@ export default function Footer() {
                                 {[
                                     "Home",
                                     "About",
+                                    "Skills",
                                     "Projects",
                                     "Hackathons",
                                     "Experience",
+                                    "Certificates",
+                                    "Journey",
                                     "Contact",
                                 ].map((item) => (
                                     <li key={item}>
                                         <Link
-                                            to={item.toLowerCase()}
-                                            smooth={true}
-                                            duration={500}
+                                            to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                                             className="text-slate-400 hover:text-blue-400 transition-colors cursor-pointer"
                                         >
                                             {item}

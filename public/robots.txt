@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /api
+Disallow: /*?utm_
+Disallow: /*?ref=
 
 Sitemap: https://himmat-portfolio.vercel.app/sitemap.xml

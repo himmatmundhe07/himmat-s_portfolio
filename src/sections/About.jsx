@@ -26,7 +26,7 @@ export default function About() {
 
                         <div className="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
                             <p>
-                                I'm a first-year <strong className="text-slate-900 dark:text-white font-semibold">Computer Science Engineering student</strong> at Swaminarayan University (CGPA: 9.2/10), specializing in the <strong className="text-slate-900 dark:text-white font-semibold">MERN Stack</strong>. Experienced in building production-grade systems including a full-stack healthcare platform and real-time communication tools.
+                                I'm a first-year <strong className="text-slate-900 dark:text-white font-semibold">Computer Science Engineering student</strong> at Swaminarayan University (Semester 1 SCPA: 10/10), specializing in the <strong className="text-slate-900 dark:text-white font-semibold">MERN Stack</strong>. Experienced in building production-grade systems including a full-stack healthcare platform and real-time communication tools.
                             </p>
                             <p>
                                 Strong focus on <strong className="text-slate-900 dark:text-white font-semibold">clean code, scalable architecture, and intuitive UI/UX</strong>. I've solved 150+ problems on LeetCode with a strong grasp of arrays, strings, recursion, and dynamic programming.
@@ -45,8 +45,8 @@ export default function About() {
                             </div>
                             <div className="w-px h-12 bg-slate-200 dark:bg-slate-700"></div>
                             <div className="flex flex-col gap-1">
-                                <span className="text-3xl font-bold text-blue-600 dark:text-blue-400 font-heading">9.2</span>
-                                <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide font-medium">CGPA</span>
+                                <span className="text-3xl font-bold text-blue-600 dark:text-blue-400 font-heading">10</span>
+                                <span className="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wide font-medium">Sem 1 SCPA</span>
                             </div>
                         </div>
                     </div>

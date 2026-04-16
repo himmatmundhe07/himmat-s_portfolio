@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
@@ -15,11 +16,13 @@ import GithubActivity from "./components/GithubActivity";
 import ScrollToTop from "./components/ScrollToTop";
 import LiveBackground from "./components/LiveBackground";
 import Loader from "./components/Loader";
+import SEO from "./components/SEO";
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [enablePointerFx, setEnablePointerFx] = useState(false);
   const shouldReduceMotion = useReducedMotion();
+  const location = useLocation();
 
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
@@ -30,6 +33,23 @@ function App() {
 
   const dotX = useMotionValue(-100);
   const dotY = useMotionValue(-100);
+
+  // Handle route based smooth scrolling
+  useEffect(() => {
+    if (loading) return; // Wait for loader to finish
+    const sectionId = location.pathname === "/" ? "home" : location.pathname.substring(1);
+    const element = document.getElementById(sectionId);
+    
+    if (element) {
+      setTimeout(() => {
+        const yOffset = -70; // Navbar height offset
+        const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }, 50);
+    } else if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location.pathname, loading]);
 
   useEffect(() => {
     if (typeof window === "undefined") return undefined;
@@ -73,15 +93,9 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
-    return () => {
-      document.documentElement.style.scrollBehavior = "auto";
-    };
-  }, []);
-
   return (
     <>
+      <SEO />
       <AnimatePresence>{loading && <Loader key="loader" />}</AnimatePresence>
 
       {enablePointerFx && (
@@ -109,12 +123,12 @@ function App() {
         <main>
           <Hero />
           <About />
+          <Skills />
           <Projects />
           <Hackathons />
           <Experience />
           <Certificates />
           <GithubActivity />
-          <Skills />
           <Journey />
           <Contact />
         </main>

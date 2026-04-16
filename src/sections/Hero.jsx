@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowRight, Download, Youtube, Twitter } from "lucide-react";
 import { SiLeetcode } from "react-icons/si";
@@ -82,13 +83,13 @@ export default function Hero() {
                             <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
                             View Resume
                         </a>
-                        <a
-                            href="#contact"
+                        <Link
+                            to="/contact"
                             className="group px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 font-medium rounded-xl hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-md transition-all flex items-center gap-2 active:scale-95"
                         >
                             Let us Talk
                             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                        </a>
+                        </Link>
                     </motion.div>
 
                     <motion.div variants={item} className="flex gap-4 flex-wrap text-slate-900 dark:text-slate-400">
