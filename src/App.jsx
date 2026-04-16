@@ -93,7 +93,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1800);
+    }, 1000); // Optimized for speed from 1800ms
     return () => clearTimeout(timer);
   }, []);
 

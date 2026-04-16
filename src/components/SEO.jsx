@@ -38,6 +38,10 @@ const seoData = {
     '/contact': {
         title: 'Contact Himmat Mundhe | Hire Full Stack React Developer',
         description: 'Get in touch with Himmat Mundhe for freelance opportunities, full-time software engineering roles, or tech collaborations. Based in Ahmedabad, open to remote.',
+    },
+    '/designs': {
+        title: 'Figma UI/UX Designs | Creative Work by Himmat Mundhe',
+        description: 'Explore the creative design portfolio of Himmat Mundhe, including mobile app UI, web dashboards, and interactive user experiences designed in Figma.',
     }
 };
 
