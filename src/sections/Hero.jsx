@@ -42,7 +42,7 @@ export default function Hero() {
                         className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading text-slate-900 dark:text-white mb-4 tracking-tight leading-tight"
                     >
                         Hi, I am <br />
-                        <span className="text-blue-600 dark:text-blue-500 relative inline-block">
+                        <span className="text-blue-600 dark:text-blue-500 relative inline-block min-h-[1.2em]">
                             <Typewriter
                                 words={["Himmat Mundhe", "a MERN Developer", "a UI/UX Designer"]}
                                 loop={0}
@@ -158,7 +158,9 @@ export default function Hero() {
                         <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-900/10 dark:shadow-blue-900/20 border-4 border-white dark:border-slate-800 transform rotate-3 hover:rotate-0 transition-all duration-700">
                             <img
                                 src="/himmat.webp"
-                                alt="Himmat Mundhe"
+                                alt="Himmat Mundhe - Full Stack Developer portrait"
+                                width={500}
+                                height={500}
                                 className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                                 loading="eager"
                                 fetchpriority="high"

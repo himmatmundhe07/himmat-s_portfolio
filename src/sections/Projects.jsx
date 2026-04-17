@@ -188,10 +188,10 @@ export default function Projects() {
                         <button
                             key={cat.id}
                             onClick={() => setActiveCategory(cat.id)}
-                            className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                            className={`flex items-center gap-2 px-6 py-3.5 rounded-full font-bold transition-all duration-300 min-w-[44px] ${
                                 activeCategory === cat.id
                                     ? "bg-slate-900 dark:bg-blue-600 text-white shadow-lg scale-105"
-                                    : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
+                                    : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 font-bold"
                             }`}
                         >
                             {cat.icon && <cat.icon size={18} />}
@@ -277,6 +277,7 @@ export default function Projects() {
                                                     href={project.links.github}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
+                                                    aria-label={`View ${project.title} source code on GitHub`}
                                                     className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 rounded text-slate-900 dark:text-white text-sm font-bold transition-all"
                                                 >
                                                     <Github size={16} /> Code
@@ -287,6 +288,7 @@ export default function Projects() {
                                                     href={project.links.live}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
+                                                    aria-label={`Visit ${project.title} live website`}
                                                     className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm font-medium transition-colors"
                                                 >
                                                     <ExternalLink size={16} /> Live
@@ -297,6 +299,7 @@ export default function Projects() {
                                                     href={project.links.figma}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
+                                                    aria-label={`View ${project.title} design on Figma`}
                                                     className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors"
                                                 >
                                                     <Pen size={16} /> Figma
@@ -307,6 +310,7 @@ export default function Projects() {
                                                     href={project.links.certificate}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
+                                                    aria-label={`View ${project.title} project certificate`}
                                                     className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 text-sm font-medium transition-colors"
                                                 >
                                                     <Award size={16} /> Certificate
@@ -317,6 +321,7 @@ export default function Projects() {
                                                     href={project.links.youtube}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
+                                                    aria-label={`Watch ${project.title} video demo on YouTube`}
                                                     className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 text-sm font-medium transition-colors ml-auto"
                                                 >
                                                     <Youtube size={18} /> Demo

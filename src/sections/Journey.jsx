@@ -46,10 +46,6 @@ export default function Journey() {
 
     return (
         <section id="journey" className="py-24 bg-transparent relative overflow-hidden transition-colors duration-300">
-            {/* Background Gradients removed for professional look */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            </div>
-
             <div className="max-w-4xl mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -96,7 +92,7 @@ export default function Journey() {
                                 <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
                                     {item.description}
                                 </p>
-                                <span className="text-xs font-bold text-slate-400 dark:text-slate-500 mt-4 block uppercase tracking-widest">
+                                <span className="text-xs font-bold text-slate-600 dark:text-slate-400 mt-4 block uppercase tracking-widest">
                                     {item.type}
                                 </span>
                             </div>

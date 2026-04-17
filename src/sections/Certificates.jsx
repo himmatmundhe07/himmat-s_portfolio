@@ -103,7 +103,11 @@ export default function Certificates() {
                         >
                             <div
                                 className="relative h-56 overflow-hidden bg-slate-200 dark:bg-slate-700 cursor-pointer"
+                                role="button"
+                                tabIndex={0}
+                                aria-label={`View ${cert.title} certificate full size`}
                                 onClick={() => setSelectedCert(cert)}
+                                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedCert(cert); } }}
                             >
                                 <div
                                     className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10`}
@@ -132,7 +136,7 @@ export default function Certificates() {
                                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 font-heading group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     {cert.title}
                                 </h3>
-                                <p className="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">
+                                <p className="text-sm font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-4">
                                     {cert.issuer}
                                 </p>
                                 <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-6 flex-grow">
@@ -174,6 +178,7 @@ export default function Certificates() {
                             <button
                                 className="absolute top-4 right-4 z-50 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full backdrop-blur-sm transition-colors"
                                 onClick={() => setSelectedCert(null)}
+                                aria-label="Close certificate preview"
                             >
                                 <X size={24} />
                             </button>

@@ -124,18 +124,32 @@ function App() {
       >
         <ScrollToTop />
         <Navbar />
-        <main>
+        <main id="main-content">
           <Hero />
           <About />
           <Skills />
-          <React.Suspense fallback={<div className="h-40 flex items-center justify-center text-slate-500">Loading section...</div>}>
+          <React.Suspense fallback={<div className="min-h-[600px] flex items-center justify-center text-slate-500">Loading Projects...</div>}>
             <Projects />
+          </React.Suspense>
+          <React.Suspense fallback={<div className="min-h-[400px] flex items-center justify-center text-slate-500">Loading Designs...</div>}>
             <FigmaDesigns />
+          </React.Suspense>
+          <React.Suspense fallback={<div className="min-h-[600px] flex items-center justify-center text-slate-500">Loading Hackathons...</div>}>
             <Hackathons />
+          </React.Suspense>
+          <React.Suspense fallback={<div className="min-h-[300px] flex items-center justify-center text-slate-500">Loading Experience...</div>}>
             <Experience />
+          </React.Suspense>
+          <React.Suspense fallback={<div className="min-h-[400px] flex items-center justify-center text-slate-500">Loading Certifications...</div>}>
             <Certificates />
+          </React.Suspense>
+          <React.Suspense fallback={<div className="min-h-[500px] flex items-center justify-center text-slate-500">Loading activity...</div>}>
             <GithubActivity />
+          </React.Suspense>
+          <React.Suspense fallback={<div className="min-h-[400px] flex items-center justify-center text-slate-500">Loading Journey...</div>}>
             <Journey />
+          </React.Suspense>
+          <React.Suspense fallback={<div className="min-h-[500px] flex items-center justify-center text-slate-500">Loading Contact...</div>}>
             <Contact />
           </React.Suspense>
         </main>

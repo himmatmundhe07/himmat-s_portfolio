@@ -84,7 +84,7 @@ export default function Navbar() {
                     <button
                         onClick={() => setDarkMode(!darkMode)}
                         aria-label="Toggle Theme"
-                        className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors focus:outline-none"
+                        className="p-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors focus:outline-none min-w-[44px] min-h-[44px] flex items-center justify-center"
                     >
                         {darkMode ? <Sun size={20} /> : <Moon size={20} />}
                     </button>
@@ -94,12 +94,12 @@ export default function Navbar() {
                     <button
                         onClick={() => setDarkMode(!darkMode)}
                         aria-label="Toggle Theme Mobile"
-                        className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors focus:outline-none"
+                        className="p-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors focus:outline-none min-w-[44px] min-h-[44px] flex items-center justify-center"
                     >
                         {darkMode ? <Sun size={20} /> : <Moon size={20} />}
                     </button>
 
-                    <button aria-label="Toggle Menu" onClick={() => setIsOpen(!isOpen)} className="text-slate-900 dark:text-white focus:outline-none">
+                    <button aria-label="Toggle Menu" onClick={() => setIsOpen(!isOpen)} className="text-slate-900 dark:text-white focus:outline-none p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
                         {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
@@ -117,7 +117,7 @@ export default function Navbar() {
                             key={link.name}
                             to={link.href}
                             aria-current={({ isActive }) => (isActive ? "page" : undefined)}
-                            className={({ isActive }) => `text-slate-600 dark:text-slate-300 text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer ${isActive ? "text-blue-600 dark:text-blue-400" : ""}`}
+                            className={({ isActive }) => `text-slate-600 dark:text-slate-300 text-lg font-bold py-2 px-8 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer w-full text-center ${isActive ? "text-blue-600 dark:text-blue-400" : ""}`}
                             onClick={() => setIsOpen(false)}
                         >
                             {link.name}

@@ -49,7 +49,7 @@ const hackathons = [
         venue: "WCE ACM, Sangli",
         team: "Team 4-Bits",
         result: "Finalist, Top 10 / 1,745 Teams",
-        resultColor: "text-amber-600 bg-amber-50 dark:bg-amber-500/10 border-amber-200 dark:border-amber-500/30",
+        resultColor: "text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 border-amber-300 dark:border-amber-500/40",
         description:
             "Secured a top spot out of 1,745 teams with Sanjeevani, an AI-powered emergency healthcare ecosystem designed for high-pressure emergency response.",
         details:
@@ -81,7 +81,7 @@ const hackathons = [
         venue: "Sangam University",
         team: "Team 4-Bits",
         result: "Finalist",
-        resultColor: "text-emerald-600 bg-emerald-50 dark:bg-emerald-500/10 border-emerald-200 dark:border-emerald-500/30",
+        resultColor: "text-emerald-800 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/40 border-emerald-300 dark:border-emerald-500/40",
         description:
             "Built the initial version of Sanjeevani as a QR-based emergency health record system for faster and safer patient data access.",
         details:
@@ -111,7 +111,7 @@ const hackathons = [
         venue: "TechXDM Club, Faculty of Engineering, Swaminarayan University",
         team: "Team 4-Bits",
         result: "Bluetooth Offline Chat Application",
-        resultColor: "text-blue-600 bg-blue-50 dark:bg-blue-500/10 border-blue-200 dark:border-blue-500/30",
+        resultColor: "text-blue-800 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/40 border-blue-300 dark:border-blue-500/40",
         description:
             "Built Air Talk, a Bluetooth-based offline chat application for resilient communication when network infrastructure is unavailable.",
         details:
@@ -234,29 +234,30 @@ export default function Hackathons() {
                                                 <button
                                                     type="button"
                                                     onClick={prevImage}
-                                                    className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/30 hover:bg-white/50 text-white transition-colors"
+                                                    className="absolute left-3 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/30 hover:bg-white/50 text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                                                     aria-label="Previous image"
                                                 >
-                                                    <ChevronLeft size={18} />
+                                                    <ChevronLeft size={20} />
                                                 </button>
                                                 <button
                                                     type="button"
                                                     onClick={nextImage}
-                                                    className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/30 hover:bg-white/50 text-white transition-colors"
+                                                    className="absolute right-3 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/30 hover:bg-white/50 text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                                                     aria-label="Next image"
                                                 >
-                                                    <ChevronRight size={18} />
+                                                    <ChevronRight size={20} />
                                                 </button>
-                                                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-full bg-slate-900/55 backdrop-blur-sm flex gap-1.5">
+                                                <div className="absolute bottom-1 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-slate-900/55 backdrop-blur-sm flex gap-0 items-center">
                                                     {selectedHackathon.images.map((_, i) => (
                                                         <button
                                                             key={i}
                                                             type="button"
                                                             onClick={() => setCurrentImageIndex(i)}
-                                                            className={`h-1.5 rounded-full transition-all ${
-                                                                i === currentImageIndex ? "w-4 bg-white" : "w-1.5 bg-white/55"
-                                                            }`}
-                                                        />
+                                                            aria-label={`View image ${i + 1} of ${selectedHackathon.images.length}`}
+                                                            className="p-3 flex items-center justify-center min-w-[32px] min-h-[32px]"
+                                                        >
+                                                            <span className={`block h-1.5 rounded-full transition-all ${i === currentImageIndex ? "w-5 bg-white" : "w-1.5 bg-white/55"}`} />
+                                                        </button>
                                                     ))}
                                                 </div>
                                             </>
@@ -322,7 +323,7 @@ export default function Hackathons() {
                                         <span className="font-semibold">Project:</span> {selectedHackathon.project}
                                     </p>
 
-                                    <div className="grid sm:grid-cols-3 gap-2 text-slate-500 dark:text-slate-400 text-sm mb-4">
+                                    <div className="grid sm:grid-cols-3 gap-2 text-slate-600 dark:text-slate-400 text-sm mb-4">
                                         <p className="inline-flex items-center gap-1.5">
                                             <Calendar size={14} />
                                             {selectedHackathon.date}
@@ -421,19 +422,17 @@ export default function Hackathons() {
                     </button>
                 </div>
 
-                <div className="mt-5 flex items-center justify-center gap-2">
+                <div className="mt-5 flex items-center justify-center gap-0">
                     {hackathons.map((hackathon, index) => (
                         <button
                             key={hackathon.id}
                             type="button"
                             onClick={() => goToHackathon(index)}
                             aria-label={`Go to ${hackathon.title}`}
-                            className={`h-2 rounded-full transition-all ${
-                                index === activeIndex
-                                    ? "w-6 bg-blue-600 dark:bg-blue-400"
-                                    : "w-2 bg-slate-300 dark:bg-slate-600"
-                            }`}
-                        />
+                            className="p-4 flex items-center justify-center min-w-[44px] min-h-[44px]"
+                        >
+                            <span className={`block h-2 rounded-full transition-all ${index === activeIndex ? "w-8 bg-blue-600 dark:bg-blue-400" : "w-2 bg-slate-300 dark:bg-slate-600"}`} />
+                        </button>
                     ))}
                 </div>
             </div>
