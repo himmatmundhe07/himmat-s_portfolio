@@ -42,8 +42,8 @@ export default function Hero() {
                         className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading text-slate-900 dark:text-white mb-4 tracking-tight leading-tight"
                     >
                         Hi, I am <br />
-                        <span className="text-blue-600 dark:text-blue-500 relative inline-block min-h-[1.12em] select-none">
-                            <span className="inline-block min-w-[320px]">
+                        <span className="text-blue-600 dark:text-blue-500 relative inline-flex items-baseline min-h-[1.2em] select-none align-bottom">
+                            <span className="inline-block min-w-[320px] md:min-w-[480px] lg:min-w-[580px]" style={{ lineHeight: 'inherit' }}>
                                 <Typewriter
                                     words={["Himmat Mundhe", "a MERN Developer", "a UI/UX Designer"]}
                                     loop={0}

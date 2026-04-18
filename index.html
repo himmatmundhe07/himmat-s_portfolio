@@ -139,21 +139,69 @@
     Skip to Content
   </a>
   <div id="root">
-    <!-- Elite Optimization: Pre-rendered HTML Skeleton to bypass React execution bottleneck for LCP -->
-    <div style="min-height: 100vh; display: flex; align-items: center; padding-top: 80px; padding-left: 24px; padding-right: 24px; max-width: 1280px; margin: 0 auto; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; items: center; width: 100%;">
-        <div>
-          <h1 style="font-size: 3.5rem; font-weight: 700; color: #0f172a; margin-bottom: 1.5rem; line-height: 1.1;">
-            Hi, I am <br> <span style="color: #2563eb;">Himmat Mundhe</span>
+    <!-- CLS-Optimized Skeleton: Mirrors exact React Hero DOM to prevent layout shift during hydration -->
+    <style>
+      .skeleton-hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; padding-left: 24px; padding-right: 24px; max-width: 1280px; margin: 0 auto; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; width: 100%; }
+      .skeleton-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; width: 100%; }
+      .skeleton-text { order: 2; }
+      .skeleton-image { order: 1; display: flex; justify-content: center; }
+      .skeleton-img-wrap { position: relative; width: 300px; height: 300px; }
+      .skeleton-img-inner { position: relative; width: 100%; height: 100%; border-radius: 2rem; overflow: hidden; border: 4px solid #fff; transform: rotate(3deg); background: #f1f5f9; box-shadow: 0 25px 50px -12px rgba(30, 58, 138, 0.1); }
+      .skeleton-img-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+      .skeleton-badge { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+      .skeleton-badge span { padding: 4px 12px; background: #eff6ff; color: #2563eb; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid #dbeafe; }
+      .skeleton-badge-line { height: 1px; width: 48px; background: #bfdbfe; }
+      .skeleton-h1 { font-size: 3rem; font-weight: 700; color: #0f172a; margin-bottom: 16px; line-height: 1.1; letter-spacing: -0.025em; }
+      .skeleton-h1 .blue { color: #2563eb; display: inline-block; min-height: 1.12em; min-width: 320px; }
+      .skeleton-desc { max-width: 32rem; color: #475569; font-size: 1.125rem; line-height: 1.625; margin-bottom: 40px; }
+      .skeleton-desc strong { display: block; font-weight: 700; color: #0f172a; margin-bottom: 16px; }
+      .skeleton-btns { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 48px; }
+      .skeleton-btns a { padding: 16px 32px; font-weight: 500; border-radius: 12px; font-size: 1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+      .skeleton-btn-primary { background: #0f172a; color: #fff; box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.2); }
+      .skeleton-btn-secondary { background: #fff; color: #0f172a; border: 1px solid #e2e8f0; }
+      .skeleton-socials { display: flex; gap: 16px; flex-wrap: wrap; }
+      .skeleton-socials span { width: 44px; height: 44px; border-radius: 9999px; background: #f8fafc; display: block; }
+      @media (min-width: 768px) {
+        .skeleton-grid { grid-template-columns: 1fr 1fr; }
+        .skeleton-text { order: 1; }
+        .skeleton-image { order: 2; justify-content: flex-end; }
+        .skeleton-img-wrap { width: 450px; height: 450px; }
+        .skeleton-h1 { font-size: 4.5rem; }
+      }
+      @media (min-width: 1024px) {
+        .skeleton-img-wrap { width: 500px; height: 500px; }
+        .skeleton-h1 { font-size: 6rem; }
+      }
+    </style>
+    <div class="skeleton-hero">
+      <div class="skeleton-grid">
+        <div class="skeleton-text">
+          <div class="skeleton-badge">
+            <span>Portfolio</span>
+            <span class="skeleton-badge-line"></span>
+          </div>
+          <h1 class="skeleton-h1">
+            Hi, I am <br><span class="blue">Himmat Mundhe</span>
           </h1>
-          <p style="max-width: 32rem; color: #475569; font-size: 1.125rem;">
-            <strong style="display: block; font-weight: 600; color: #0f172a; margin-bottom: 1rem;">
-              I build production-grade full-stack systems focused on clean architecture and real user impact.
-            </strong>
-          </p>
+          <div class="skeleton-desc">
+            <strong>I build production-grade full-stack systems focused on clean architecture and real user impact.</strong>
+            CSE student and builder from Ahmedabad, Gujarat, working across MERN apps, emergency health tech,
+            interactive web experiences, and UI/UX design.
+          </div>
+          <div class="skeleton-btns">
+            <a href="#" class="skeleton-btn-primary">View Resume</a>
+            <a href="#" class="skeleton-btn-secondary">Let us Talk</a>
+          </div>
+          <div class="skeleton-socials">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
         </div>
-        <div style="display: flex; justify-content: flex-end;">
-          <div style="width: 500px; height: 500px; background: #f1f5f9; border-radius: 2rem; rotate: 3deg;"></div>
+        <div class="skeleton-image">
+          <div class="skeleton-img-wrap">
+            <div class="skeleton-img-inner">
+              <img src="/himmat.webp" alt="Himmat Mundhe - Full Stack Developer portrait" width="500" height="500" fetchpriority="high" loading="eager" decoding="async" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

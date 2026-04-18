@@ -224,6 +224,8 @@ export default function Hackathons() {
                                             transition={{ duration: 0.2 }}
                                             src={selectedHackathon.images[currentImageIndex]}
                                             alt={`${selectedHackathon.title} visual ${currentImageIndex + 1}`}
+                                            width={800}
+                                            height={600}
                                             className="block w-full h-full object-cover object-center"
                                             loading="eager"
                                             decoding="async"

@@ -91,7 +91,10 @@ export default function FigmaDesigns() {
                                 <img
                                     src={project.image}
                                     alt={project.title}
+                                    width={600}
+                                    height={400}
                                     loading="lazy"
+                                    decoding="async"
                                     className="w-[90%] h-[90%] object-cover object-top rounded-t-xl transform group-hover:scale-105 transition-transform duration-700 shadow-lg"
                                 />
                                 <div className="absolute top-4 left-4 z-20">
