@@ -42,16 +42,18 @@ export default function Hero() {
                         className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading text-slate-900 dark:text-white mb-4 tracking-tight leading-tight"
                     >
                         Hi, I am <br />
-                        <span className="text-blue-600 dark:text-blue-500 relative inline-block min-h-[1.2em]">
-                            <Typewriter
-                                words={["Himmat Mundhe", "a MERN Developer", "a UI/UX Designer"]}
-                                loop={0}
-                                cursor
-                                cursorStyle="|"
-                                typeSpeed={120}
-                                deleteSpeed={80}
-                                delaySpeed={1500}
-                            />
+                        <span className="text-blue-600 dark:text-blue-500 relative inline-block min-h-[1.12em] select-none">
+                            <span className="inline-block min-w-[320px]">
+                                <Typewriter
+                                    words={["Himmat Mundhe", "a MERN Developer", "a UI/UX Designer"]}
+                                    loop={0}
+                                    cursor
+                                    cursorStyle="|"
+                                    typeSpeed={120}
+                                    deleteSpeed={80}
+                                    delaySpeed={1500}
+                                />
+                            </span>
                             <svg
                                 className="absolute w-full h-3 -bottom-1 left-0 text-blue-200 dark:text-blue-900 -z-10"
                                 viewBox="0 0 100 10"
@@ -154,8 +156,8 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
                     className="relative order-1 md:order-2 flex justify-center md:justify-end"
                 >
-                    <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px]">
-                        <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-900/10 dark:shadow-blue-900/20 border-4 border-white dark:border-slate-800 transform rotate-3 hover:rotate-0 transition-all duration-700">
+                    <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] aspect-square">
+                        <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-900/10 dark:shadow-blue-900/20 border-4 border-white dark:border-slate-800 transform rotate-3 hover:rotate-0 transition-all duration-700 bg-slate-100 dark:bg-slate-800">
                             <img
                                 src="/himmat.webp"
                                 alt="Himmat Mundhe - Full Stack Developer portrait"

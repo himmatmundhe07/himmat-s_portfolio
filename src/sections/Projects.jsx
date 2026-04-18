@@ -200,7 +200,7 @@ export default function Projects() {
                     ))}
                 </div>
 
-                <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
                     <AnimatePresence mode="popLayout">
                         {filteredProjects.map((project) => (
                             <motion.div
@@ -218,6 +218,8 @@ export default function Projects() {
                                             <img
                                                 src={project.image}
                                                 alt={project.title}
+                                                width={600}
+                                                height={400}
                                                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                                 loading="lazy"
                                                 decoding="async"

@@ -122,6 +122,8 @@ export default function Certificates() {
                                 <img
                                     src={cert.image}
                                     alt={cert.title}
+                                    width={600}
+                                    height={400}
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                     loading="lazy"
                                     decoding="async"
