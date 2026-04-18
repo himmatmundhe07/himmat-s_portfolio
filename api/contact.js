@@ -92,6 +92,7 @@ export default async function handler(req, res) {
     "EMAILJS_SERVICE_ID",
     "EMAILJS_TEMPLATE_ID",
     "EMAILJS_PUBLIC_KEY",
+    "EMAILJS_PRIVATE_KEY",
     "CONTACT_TO_EMAIL",
     "CONTACT_TO_NAME",
   ];
@@ -110,6 +111,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         user_id: process.env.EMAILJS_PUBLIC_KEY,
+        accessToken: process.env.EMAILJS_PRIVATE_KEY,
         service_id: process.env.EMAILJS_SERVICE_ID,
         template_id: process.env.EMAILJS_TEMPLATE_ID,
         template_params: {
