@@ -128,7 +128,7 @@ export default async function handler(req, res) {
       const errorText = await emailJsResponse.text();
       console.error("EmailJS API error:", emailJsResponse.status, errorText);
       return res.status(502).json({ 
-        message: `Email Service Error: ${errorText || "Invalid IDs or configuration"}` 
+        message: "Unable to send message right now. Please try again later." 
       });
     }
 
