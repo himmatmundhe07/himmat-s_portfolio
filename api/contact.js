@@ -115,9 +115,10 @@ export default async function handler(req, res) {
         service_id: process.env.EMAILJS_SERVICE_ID,
         template_id: process.env.EMAILJS_TEMPLATE_ID,
         template_params: {
-          from_name: name,
-          from_email: email,
-          message,
+          name: name,
+          email: email,
+          message: message,
+          time: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
           to_name: process.env.CONTACT_TO_NAME,
           to_email: process.env.CONTACT_TO_EMAIL,
         },
